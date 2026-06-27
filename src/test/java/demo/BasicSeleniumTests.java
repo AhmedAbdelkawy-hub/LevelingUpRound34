@@ -13,6 +13,12 @@ public class BasicSeleniumTests {
         WebDriver driver;
         driver = new ChromeDriver(getOptimizedOptions());
         driver.navigate().to("http://www.google.com");
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println("Current URL: " + currentUrl);
+        String currentPageTitle = driver.getTitle();
+        System.out.println("Current Page Title: " + currentPageTitle);
+
+        // New browser session > Browser actions > element identification> element actions>get element info or get browser info> check point
         driver.quit();
     }
 
